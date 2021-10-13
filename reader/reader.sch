@@ -784,71 +784,17 @@ F 3 "" H 14450 2400 50  0001 C CNN
 	1    14450 2400
 	1    0    0    -1  
 $EndComp
-Text GLabel 12050 2650 0    50   Input ~ 0
-i2c_sda
-Text GLabel 12050 2550 0    50   Input ~ 0
-i2c_scl
-$Comp
-L power:+3V3 #PWR031
-U 1 1 617ACEE2
-P 13600 1950
-F 0 "#PWR031" H 13600 1800 50  0001 C CNN
-F 1 "+3V3" H 13615 2123 50  0000 C CNN
-F 2 "" H 13600 1950 50  0001 C CNN
-F 3 "" H 13600 1950 50  0001 C CNN
-	1    13600 1950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R16
-U 1 1 617AD187
-P 13600 2050
-F 0 "R16" H 13659 2096 50  0000 L CNN
-F 1 "2k2" H 13659 2005 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 13600 2050 50  0001 C CNN
-F 3 "~" H 13600 2050 50  0001 C CNN
-	1    13600 2050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR032
-U 1 1 617B431C
-P 13950 1950
-F 0 "#PWR032" H 13950 1800 50  0001 C CNN
-F 1 "+3V3" H 13965 2123 50  0000 C CNN
-F 2 "" H 13950 1950 50  0001 C CNN
-F 3 "" H 13950 1950 50  0001 C CNN
-	1    13950 1950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R17
-U 1 1 617B4322
-P 13950 2050
-F 0 "R17" H 14009 2096 50  0000 L CNN
-F 1 "2k2" H 14009 2005 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 13950 2050 50  0001 C CNN
-F 3 "~" H 13950 2050 50  0001 C CNN
-	1    13950 2050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	13600 2150 13600 2550
 $Comp
 L power:GND #PWR034
 U 1 1 617F51EA
-P 14450 3050
-F 0 "#PWR034" H 14450 2800 50  0001 C CNN
-F 1 "GND" H 14455 2877 50  0000 C CNN
-F 2 "" H 14450 3050 50  0001 C CNN
-F 3 "" H 14450 3050 50  0001 C CNN
-	1    14450 3050
+P 14450 2950
+F 0 "#PWR034" H 14450 2700 50  0001 C CNN
+F 1 "GND" H 14455 2777 50  0000 C CNN
+F 2 "" H 14450 2950 50  0001 C CNN
+F 3 "" H 14450 2950 50  0001 C CNN
+	1    14450 2950
 	1    0    0    -1  
 $EndComp
-Text GLabel 12050 2750 0    50   Input ~ 0
-keypad_int
-Wire Wire Line
-	13950 2150 13950 2650
 $Comp
 L Connector_Generic:Conn_01x02 J4
 U 1 1 618293CC
@@ -1244,9 +1190,6 @@ Wire Wire Line
 Connection ~ 7300 4900
 Wire Wire Line
 	7300 4900 7400 4900
-Text GLabel 10650 6300 0    50   Input ~ 0
-keypad_int
-NoConn ~ 11850 6450
 Wire Wire Line
 	10200 8000 10650 8000
 Wire Wire Line
@@ -1261,10 +1204,6 @@ Text Label 9400 8000 0    50   ~ 0
 mcu_vcc_t
 Text Label 10250 8000 0    50   ~ 0
 mcu_vcc
-Text GLabel 11850 6850 2    50   Input ~ 0
-i2c_scl
-Text GLabel 11850 6750 2    50   Input ~ 0
-i2c_sda
 Text Label 11950 6650 0    50   ~ 0
 swd_io
 Text Label 11950 6550 0    50   ~ 0
@@ -1308,56 +1247,22 @@ Wire Wire Line
 Connection ~ 10650 8250
 Wire Wire Line
 	10650 8100 10650 8250
-Text GLabel 10650 7750 0    50   Input ~ 0
-lcd_e
-Text GLabel 10650 7100 0    50   Input ~ 0
+Text GLabel 11850 6750 2    50   Input ~ 0
 lcd_rw
-Text GLabel 10650 7000 0    50   Input ~ 0
+Text GLabel 11850 6850 2    50   Input ~ 0
 lcd_rs
-Text Label 12150 8100 0    50   ~ 0
-lcd_d7
-Text Label 12150 8000 0    50   ~ 0
-lcd_d6
-Text Label 12150 7900 0    50   ~ 0
-lcd_d5
-Text Label 12150 7800 0    50   ~ 0
-lcd_d4
-Text Label 12150 7700 0    50   ~ 0
-lcd_d3
-Text Label 12150 7600 0    50   ~ 0
-lcd_d2
-Text Label 12150 7500 0    50   ~ 0
-lcd_d1
-Text Label 12150 7400 0    50   ~ 0
-lcd_d0
-Text GLabel 10650 6800 0    50   Input ~ 0
+Text GLabel 11850 7400 2    50   Input ~ 0
 nfc_irq_in
-Text GLabel 10650 6600 0    50   Input ~ 0
+Text GLabel 10650 6800 0    50   Input ~ 0
 nfc_irq_out
 Text GLabel 10650 6900 0    50   Input ~ 0
 spi_miso
 Text GLabel 10650 6700 0    50   Input ~ 0
 spi_nss
-Text GLabel 10650 6500 0    50   Input ~ 0
+Text GLabel 10650 7000 0    50   Input ~ 0
 spi_mosi
 Text GLabel 10650 6400 0    50   Input ~ 0
 spi_sclk
-Wire Wire Line
-	11850 8100 12900 8100
-Wire Wire Line
-	12900 8000 11850 8000
-Wire Wire Line
-	11850 7900 12900 7900
-Wire Wire Line
-	11850 7800 12900 7800
-Wire Wire Line
-	12900 7700 11850 7700
-Wire Wire Line
-	11850 7600 12900 7600
-Wire Wire Line
-	12900 7500 11850 7500
-Wire Wire Line
-	11850 7400 12900 7400
 Wire Wire Line
 	8100 7300 8100 7350
 Connection ~ 8600 7850
@@ -1631,41 +1536,16 @@ F 3 "" H 14250 2400 50  0001 C CNN
 	1    14250 2400
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x06 J3
-U 1 1 61680C40
-P 14700 2650
-F 0 "J3" H 14780 2642 50  0000 L CNN
-F 1 "Conn_01x06" H 14780 2551 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 14700 2650 50  0001 C CNN
-F 3 "~" H 14700 2650 50  0001 C CNN
-	1    14700 2650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	14450 2450 14450 2400
 Wire Wire Line
 	14450 2450 14500 2450
-Wire Wire Line
-	13600 2550 14500 2550
-Wire Wire Line
-	13950 2650 14500 2650
 Wire Wire Line
 	7650 2900 8100 2900
 Wire Wire Line
 	5250 1350 5850 1350
 Wire Wire Line
 	4200 1350 4600 1350
-Wire Wire Line
-	14450 3050 14450 2850
-Wire Wire Line
-	14450 2850 14500 2850
-Wire Wire Line
-	14500 2950 14250 2950
-Wire Wire Line
-	14250 2400 14250 2950
-NoConn ~ 10650 7550
-NoConn ~ 10650 7650
 Wire Wire Line
 	8600 7300 10650 7300
 Wire Wire Line
@@ -1683,69 +1563,73 @@ F 3 "" H 8600 7950 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10000 8250 10650 8250
-Text Label 12800 2650 0    50   ~ 0
-i2c_sda_t
-Text Label 12800 2550 0    50   ~ 0
-i2c_scl_t
-Wire Wire Line
-	12500 2650 12050 2650
-Wire Wire Line
-	12150 2550 12050 2550
+Text GLabel 11850 7700 2    50   Input ~ 0
+lcd_d1
+Text GLabel 11850 6450 2    50   Input ~ 0
+lcd_e
+Text GLabel 11850 7600 2    50   Input ~ 0
+lcd_d0
+NoConn ~ 10650 7750
+Text GLabel 12900 7500 0    50   Input ~ 0
+lcd_d1
+Text GLabel 12900 7600 0    50   Input ~ 0
+lcd_d2
+Text GLabel 12900 7700 0    50   Input ~ 0
+lcd_d3
+Text GLabel 12900 7800 0    50   Input ~ 0
+lcd_d4
+Text GLabel 12900 7900 0    50   Input ~ 0
+lcd_d5
+Text GLabel 12900 8000 0    50   Input ~ 0
+lcd_d6
+Text GLabel 12900 8100 0    50   Input ~ 0
+lcd_d7
+Text GLabel 12900 7400 0    50   Input ~ 0
+lcd_d0
+NoConn ~ 11850 7500
+NoConn ~ 10650 6300
+Text GLabel 10650 6500 0    50   Input ~ 0
+to_keypad_tx
+Text GLabel 10650 6600 0    50   Input ~ 0
+from_keypad_rx
+NoConn ~ 10650 7100
+Text GLabel 14150 2550 0    50   Input ~ 0
+to_keypad_tx
+Text GLabel 14150 2650 0    50   Input ~ 0
+from_keypad_rx
 $Comp
-L Device:R_Small R15
-U 1 1 617FEC6C
-P 12600 2650
-F 0 "R15" V 12404 2650 50  0000 C CNN
-F 1 "0" V 12495 2650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 12600 2650 50  0001 C CNN
-F 3 "~" H 12600 2650 50  0001 C CNN
-	1    12600 2650
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small R14
-U 1 1 617FEA2B
-P 12250 2550
-F 0 "R14" V 12054 2550 50  0000 C CNN
-F 1 "0" V 12145 2550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 12250 2550 50  0001 C CNN
-F 3 "~" H 12250 2550 50  0001 C CNN
-	1    12250 2550
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	12050 2750 13250 2750
-Wire Wire Line
-	12700 2650 13950 2650
-Connection ~ 13950 2650
-Connection ~ 13600 2550
-$Comp
-L power:+3V3 #PWR0103
-U 1 1 616B91B8
-P 13250 1950
-F 0 "#PWR0103" H 13250 1800 50  0001 C CNN
-F 1 "+3V3" H 13265 2123 50  0000 C CNN
-F 2 "" H 13250 1950 50  0001 C CNN
-F 3 "" H 13250 1950 50  0001 C CNN
-	1    13250 1950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R19
-U 1 1 616B91BE
-P 13250 2050
-F 0 "R19" H 13309 2096 50  0000 L CNN
-F 1 "2k2" H 13309 2005 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 13250 2050 50  0001 C CNN
-F 3 "~" H 13250 2050 50  0001 C CNN
-	1    13250 2050
+L Connector_Generic:Conn_01x05 J3
+U 1 1 616F7D49
+P 14700 2650
+F 0 "J3" H 14780 2692 50  0000 L CNN
+F 1 "Conn_01x05" H 14780 2601 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 14700 2650 50  0001 C CNN
+F 3 "~" H 14700 2650 50  0001 C CNN
+	1    14700 2650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	12350 2550 13600 2550
+	14250 2400 14250 2850
 Wire Wire Line
-	13250 2150 13250 2750
-Connection ~ 13250 2750
+	14450 2750 14500 2750
 Wire Wire Line
-	13250 2750 14500 2750
+	14450 2750 14450 2950
+Wire Wire Line
+	14250 2850 14500 2850
+Wire Wire Line
+	14150 2550 14500 2550
+Wire Wire Line
+	14500 2650 14150 2650
+Text GLabel 11850 7800 2    50   Input ~ 0
+lcd_d2
+Text GLabel 11850 7900 2    50   Input ~ 0
+lcd_d3
+Text GLabel 11850 8000 2    50   Input ~ 0
+lcd_d4
+Text GLabel 11850 8100 2    50   Input ~ 0
+lcd_d5
+Text GLabel 10650 7550 0    50   Input ~ 0
+lcd_d6
+Text GLabel 10650 7650 0    50   Input ~ 0
+lcd_d7
 $EndSCHEMATC
