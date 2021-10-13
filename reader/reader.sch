@@ -784,9 +784,9 @@ F 3 "" H 14450 2400 50  0001 C CNN
 	1    14450 2400
 	1    0    0    -1  
 $EndComp
-Text GLabel 12500 2650 0    50   Input ~ 0
+Text GLabel 12050 2650 0    50   Input ~ 0
 i2c_sda
-Text GLabel 12500 2550 0    50   Input ~ 0
+Text GLabel 12050 2550 0    50   Input ~ 0
 i2c_scl
 $Comp
 L power:+3V3 #PWR031
@@ -832,8 +832,6 @@ F 3 "~" H 13950 2050 50  0001 C CNN
 	1    13950 2050
 	1    0    0    -1  
 $EndComp
-Connection ~ 13950 2650
-Connection ~ 13600 2550
 Wire Wire Line
 	13600 2150 13600 2550
 $Comp
@@ -847,40 +845,10 @@ F 3 "" H 14450 3050 50  0001 C CNN
 	1    14450 3050
 	1    0    0    -1  
 $EndComp
-Text GLabel 14200 2750 0    50   Input ~ 0
+Text GLabel 12050 2750 0    50   Input ~ 0
 keypad_int
 Wire Wire Line
 	13950 2150 13950 2650
-$Comp
-L Device:R_Small R14
-U 1 1 617FEA2B
-P 12700 2550
-F 0 "R14" V 12504 2550 50  0000 C CNN
-F 1 "0" V 12595 2550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 12700 2550 50  0001 C CNN
-F 3 "~" H 12700 2550 50  0001 C CNN
-	1    12700 2550
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small R15
-U 1 1 617FEC6C
-P 13050 2650
-F 0 "R15" V 12854 2650 50  0000 C CNN
-F 1 "0" V 12945 2650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 13050 2650 50  0001 C CNN
-F 3 "~" H 13050 2650 50  0001 C CNN
-	1    13050 2650
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	13150 2650 13950 2650
-Wire Wire Line
-	12800 2550 13600 2550
-Wire Wire Line
-	12600 2550 12500 2550
-Wire Wire Line
-	12950 2650 12500 2650
 $Comp
 L Connector_Generic:Conn_01x02 J4
 U 1 1 618293CC
@@ -1162,10 +1130,6 @@ Text Label 6300 1350 0    50   ~ 0
 5v_rf
 Text Label 5100 1350 0    50   ~ 0
 5v_filter
-Text Label 13200 2550 0    50   ~ 0
-i2c_scl_t
-Text Label 13200 2650 0    50   ~ 0
-i2c_sda_t
 Wire Wire Line
 	5250 4000 4900 4000
 Wire Wire Line
@@ -1287,14 +1251,9 @@ Wire Wire Line
 	10200 8000 10650 8000
 Wire Wire Line
 	9400 8000 9800 8000
-Wire Wire Line
-	10000 8250 10250 8250
 Connection ~ 10000 8250
 Wire Wire Line
 	10000 8200 10000 8250
-Wire Wire Line
-	10250 8250 10650 8250
-Connection ~ 10250 8250
 Connection ~ 9400 8250
 Wire Wire Line
 	9400 8250 10000 8250
@@ -1477,8 +1436,6 @@ F 3 "~" H 8600 7450 50  0001 C CNN
 	1    8600 7450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	10250 8250 10250 8200
 Connection ~ 9400 8000
 $Comp
 L Device:C_Feedthrough C29
@@ -1694,8 +1651,6 @@ Wire Wire Line
 Wire Wire Line
 	13950 2650 14500 2650
 Wire Wire Line
-	14500 2750 14200 2750
-Wire Wire Line
 	7650 2900 8100 2900
 Wire Wire Line
 	5250 1350 5850 1350
@@ -1726,4 +1681,71 @@ F 3 "" H 8600 7950 50  0001 C CNN
 	1    8600 7950
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	10000 8250 10650 8250
+Text Label 12800 2650 0    50   ~ 0
+i2c_sda_t
+Text Label 12800 2550 0    50   ~ 0
+i2c_scl_t
+Wire Wire Line
+	12500 2650 12050 2650
+Wire Wire Line
+	12150 2550 12050 2550
+$Comp
+L Device:R_Small R15
+U 1 1 617FEC6C
+P 12600 2650
+F 0 "R15" V 12404 2650 50  0000 C CNN
+F 1 "0" V 12495 2650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 12600 2650 50  0001 C CNN
+F 3 "~" H 12600 2650 50  0001 C CNN
+	1    12600 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R14
+U 1 1 617FEA2B
+P 12250 2550
+F 0 "R14" V 12054 2550 50  0000 C CNN
+F 1 "0" V 12145 2550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 12250 2550 50  0001 C CNN
+F 3 "~" H 12250 2550 50  0001 C CNN
+	1    12250 2550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	12050 2750 13250 2750
+Wire Wire Line
+	12700 2650 13950 2650
+Connection ~ 13950 2650
+Connection ~ 13600 2550
+$Comp
+L power:+3V3 #PWR0103
+U 1 1 616B91B8
+P 13250 1950
+F 0 "#PWR0103" H 13250 1800 50  0001 C CNN
+F 1 "+3V3" H 13265 2123 50  0000 C CNN
+F 2 "" H 13250 1950 50  0001 C CNN
+F 3 "" H 13250 1950 50  0001 C CNN
+	1    13250 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R19
+U 1 1 616B91BE
+P 13250 2050
+F 0 "R19" H 13309 2096 50  0000 L CNN
+F 1 "2k2" H 13309 2005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 13250 2050 50  0001 C CNN
+F 3 "~" H 13250 2050 50  0001 C CNN
+	1    13250 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12350 2550 13600 2550
+Wire Wire Line
+	13250 2150 13250 2750
+Connection ~ 13250 2750
+Wire Wire Line
+	13250 2750 14500 2750
 $EndSCHEMATC

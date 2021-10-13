@@ -1,0 +1,1416 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x06 J1
+U 1 1 6186F737
+P 5850 6600
+F 0 "J1" H 5930 6592 50  0000 L CNN
+F 1 "main_board" H 5930 6501 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 5850 6600 50  0001 C CNN
+F 3 "~" H 5850 6600 50  0001 C CNN
+	1    5850 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L good_things:STM32G051GxU U2
+U 1 1 618701DD
+P 4600 3900
+F 0 "U2" H 4600 5065 50  0000 C CNN
+F 1 "STM32G051GxU" H 4600 4974 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-28_4x4mm_P0.5mm" H 4600 3900 50  0001 C CNN
+F 3 "" H 4600 3900 50  0001 C CNN
+	1    4600 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 618734F1
+P 1500 3850
+F 0 "R1" H 1441 3804 50  0000 R CNN
+F 1 "10k" H 1441 3895 50  0000 R CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" H 1500 3850 50  0001 C CNN
+F 3 "~" H 1500 3850 50  0001 C CNN
+	1    1500 3850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 618760A3
+P 1500 4150
+F 0 "C1" H 1592 4196 50  0000 L CNN
+F 1 "100n" H 1592 4105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1500 4150 50  0001 C CNN
+F 3 "~" H 1500 4150 50  0001 C CNN
+	1    1500 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 61876B3F
+P 1100 4300
+F 0 "SW1" V 1146 4252 50  0000 R CNN
+F 1 "SW_Push" V 1055 4252 50  0000 R CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 1100 4500 50  0001 C CNN
+F 3 "~" H 1100 4500 50  0001 C CNN
+	1    1100 4300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 6187747C
+P 3450 4900
+F 0 "#PWR0101" H 3450 4650 50  0001 C CNN
+F 1 "GND" H 3455 4727 50  0000 C CNN
+F 2 "" H 3450 4900 50  0001 C CNN
+F 3 "" H 3450 4900 50  0001 C CNN
+	1    3450 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Feedthrough C6
+U 1 1 61877D64
+P 3450 4800
+F 0 "C6" H 3450 5105 50  0000 C CNN
+F 1 "1u" H 3450 5014 50  0000 C CNN
+F 2 "good_things:NFM18PS105R0J3D" V 3450 4800 50  0001 C CNN
+F 3 "~" V 3450 4800 50  0001 C CNN
+	1    3450 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 4700 4000 4700
+Text Label 3650 4700 0    50   ~ 0
+mcu_vcc
+$Comp
+L Device:Ferrite_Bead_Small FB2
+U 1 1 61878F31
+P 2600 4700
+F 0 "FB2" V 2363 4700 50  0000 C CNN
+F 1 "1k@100 0.5A" V 2454 4700 50  0000 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric" V 2530 4700 50  0001 C CNN
+F 3 "~" H 2600 4700 50  0001 C CNN
+	1    2600 4700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1500 4050 1500 4000
+Connection ~ 1500 4000
+Wire Wire Line
+	1500 4000 1500 3950
+Wire Wire Line
+	1100 4000 1100 4100
+Wire Wire Line
+	1500 4250 1500 4550
+Wire Wire Line
+	1100 4550 1100 4500
+$Comp
+L power:GND #PWR0102
+U 1 1 6187C45D
+P 1100 4600
+F 0 "#PWR0102" H 1100 4350 50  0001 C CNN
+F 1 "GND" H 1105 4427 50  0000 C CNN
+F 2 "" H 1100 4600 50  0001 C CNN
+F 3 "" H 1100 4600 50  0001 C CNN
+	1    1100 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0103
+U 1 1 6187CB41
+P 1500 3750
+F 0 "#PWR0103" H 1500 3600 50  0001 C CNN
+F 1 "+3V3" H 1515 3923 50  0000 C CNN
+F 2 "" H 1500 3750 50  0001 C CNN
+F 3 "" H 1500 3750 50  0001 C CNN
+	1    1500 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 4550 1500 4550
+Wire Wire Line
+	1100 4000 1500 4000
+Connection ~ 1100 4550
+Wire Wire Line
+	1100 4600 1100 4550
+$Comp
+L Device:C_Small C4
+U 1 1 6187E4C6
+P 2800 4800
+F 0 "C4" H 2892 4846 50  0000 L CNN
+F 1 "100n" H 2892 4755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2800 4800 50  0001 C CNN
+F 3 "~" H 2800 4800 50  0001 C CNN
+	1    2800 4800
+	1    0    0    -1  
+$EndComp
+Connection ~ 2800 4700
+Wire Wire Line
+	2700 4700 2800 4700
+$Comp
+L power:GND #PWR0104
+U 1 1 61881E97
+P 3950 4850
+F 0 "#PWR0104" H 3950 4600 50  0001 C CNN
+F 1 "GND" H 3955 4677 50  0000 C CNN
+F 2 "" H 3950 4850 50  0001 C CNN
+F 3 "" H 3950 4850 50  0001 C CNN
+	1    3950 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 4850 3950 4800
+Wire Wire Line
+	3950 4800 4000 4800
+$Comp
+L power:GND #PWR0105
+U 1 1 6188386E
+P 5600 7200
+F 0 "#PWR0105" H 5600 6950 50  0001 C CNN
+F 1 "GND" H 5605 7027 50  0000 C CNN
+F 2 "" H 5600 7200 50  0001 C CNN
+F 3 "" H 5600 7200 50  0001 C CNN
+	1    5600 7200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 7200 5600 6800
+Wire Wire Line
+	5600 6800 5650 6800
+$Comp
+L power:+3V3 #PWR0106
+U 1 1 6188EC30
+P 2150 4500
+F 0 "#PWR0106" H 2150 4350 50  0001 C CNN
+F 1 "+3V3" H 2165 4673 50  0000 C CNN
+F 2 "" H 2150 4500 50  0001 C CNN
+F 3 "" H 2150 4500 50  0001 C CNN
+	1    2150 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 4000 4000 4000
+Wire Wire Line
+	2150 4500 2150 4700
+Wire Wire Line
+	2150 4700 2350 4700
+$Comp
+L power:GND #PWR0107
+U 1 1 618928E3
+P 2800 4900
+F 0 "#PWR0107" H 2800 4650 50  0001 C CNN
+F 1 "GND" H 2805 4727 50  0000 C CNN
+F 2 "" H 2800 4900 50  0001 C CNN
+F 3 "" H 2800 4900 50  0001 C CNN
+	1    2800 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 61892C19
+P 2350 4900
+F 0 "#PWR0108" H 2350 4650 50  0001 C CNN
+F 1 "GND" H 2355 4727 50  0000 C CNN
+F 2 "" H 2350 4900 50  0001 C CNN
+F 3 "" H 2350 4900 50  0001 C CNN
+	1    2350 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 61892E68
+P 2350 4800
+F 0 "C3" H 2442 4846 50  0000 L CNN
+F 1 "100n" H 2442 4755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2350 4800 50  0001 C CNN
+F 3 "~" H 2350 4800 50  0001 C CNN
+	1    2350 4800
+	1    0    0    -1  
+$EndComp
+Connection ~ 2350 4700
+Wire Wire Line
+	2350 4700 2500 4700
+Wire Wire Line
+	2800 4700 3250 4700
+Text Label 2800 4700 0    50   ~ 0
+3v3_filtered
+Text Label 3000 4000 0    50   ~ 0
+nrst
+$Comp
+L LED:WS2812B D1
+U 1 1 6189B38C
+P 1550 1200
+F 0 "D1" H 1600 1550 50  0000 L CNN
+F 1 "WS2812B" H 1600 1450 50  0000 L CNN
+F 2 "" H 1600 900 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 1650 825 50  0001 L TNN
+	1    1550 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D2
+U 1 1 6189E315
+P 2150 1200
+F 0 "D2" H 2200 1550 50  0000 L CNN
+F 1 "WS2812B" H 2200 1450 50  0000 L CNN
+F 2 "" H 2200 900 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 2250 825 50  0001 L TNN
+	1    2150 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D3
+U 1 1 6189EB4F
+P 2750 1200
+F 0 "D3" H 2800 1550 50  0000 L CNN
+F 1 "WS2812B" H 2800 1450 50  0000 L CNN
+F 2 "" H 2800 900 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 2850 825 50  0001 L TNN
+	1    2750 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D4
+U 1 1 6189F1ED
+P 3350 1200
+F 0 "D4" H 3400 1550 50  0000 L CNN
+F 1 "WS2812B" H 3400 1450 50  0000 L CNN
+F 2 "" H 3400 900 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 3450 825 50  0001 L TNN
+	1    3350 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 618A9824
+P 3350 1500
+F 0 "#PWR0109" H 3350 1250 50  0001 C CNN
+F 1 "GND" H 3355 1327 50  0000 C CNN
+F 2 "" H 3350 1500 50  0001 C CNN
+F 3 "" H 3350 1500 50  0001 C CNN
+	1    3350 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 618A9ECF
+P 2750 1500
+F 0 "#PWR0110" H 2750 1250 50  0001 C CNN
+F 1 "GND" H 2755 1327 50  0000 C CNN
+F 2 "" H 2750 1500 50  0001 C CNN
+F 3 "" H 2750 1500 50  0001 C CNN
+	1    2750 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 618AA590
+P 2150 1500
+F 0 "#PWR0111" H 2150 1250 50  0001 C CNN
+F 1 "GND" H 2155 1327 50  0000 C CNN
+F 2 "" H 2150 1500 50  0001 C CNN
+F 3 "" H 2150 1500 50  0001 C CNN
+	1    2150 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 618AAA22
+P 1550 1500
+F 0 "#PWR0112" H 1550 1250 50  0001 C CNN
+F 1 "GND" H 1555 1327 50  0000 C CNN
+F 2 "" H 1550 1500 50  0001 C CNN
+F 3 "" H 1550 1500 50  0001 C CNN
+	1    1550 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D5
+U 1 1 618B92F4
+P 3950 1200
+F 0 "D5" H 4000 1550 50  0000 L CNN
+F 1 "WS2812B" H 4000 1450 50  0000 L CNN
+F 2 "" H 4000 900 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 4050 825 50  0001 L TNN
+	1    3950 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D6
+U 1 1 618B92FA
+P 4550 1200
+F 0 "D6" H 4600 1550 50  0000 L CNN
+F 1 "WS2812B" H 4600 1450 50  0000 L CNN
+F 2 "" H 4600 900 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 4650 825 50  0001 L TNN
+	1    4550 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D7
+U 1 1 618B9300
+P 5150 1200
+F 0 "D7" H 5200 1550 50  0000 L CNN
+F 1 "WS2812B" H 5200 1450 50  0000 L CNN
+F 2 "" H 5200 900 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 5250 825 50  0001 L TNN
+	1    5150 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D8
+U 1 1 618B9306
+P 5750 1200
+F 0 "D8" H 5800 1550 50  0000 L CNN
+F 1 "WS2812B" H 5800 1450 50  0000 L CNN
+F 2 "" H 5800 900 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 5850 825 50  0001 L TNN
+	1    5750 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0113
+U 1 1 618B930C
+P 5750 1500
+F 0 "#PWR0113" H 5750 1250 50  0001 C CNN
+F 1 "GND" H 5755 1327 50  0000 C CNN
+F 2 "" H 5750 1500 50  0001 C CNN
+F 3 "" H 5750 1500 50  0001 C CNN
+	1    5750 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0114
+U 1 1 618B9312
+P 5150 1500
+F 0 "#PWR0114" H 5150 1250 50  0001 C CNN
+F 1 "GND" H 5155 1327 50  0000 C CNN
+F 2 "" H 5150 1500 50  0001 C CNN
+F 3 "" H 5150 1500 50  0001 C CNN
+	1    5150 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0115
+U 1 1 618B9318
+P 4550 1500
+F 0 "#PWR0115" H 4550 1250 50  0001 C CNN
+F 1 "GND" H 4555 1327 50  0000 C CNN
+F 2 "" H 4550 1500 50  0001 C CNN
+F 3 "" H 4550 1500 50  0001 C CNN
+	1    4550 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0116
+U 1 1 618B931E
+P 3950 1500
+F 0 "#PWR0116" H 3950 1250 50  0001 C CNN
+F 1 "GND" H 3955 1327 50  0000 C CNN
+F 2 "" H 3950 1500 50  0001 C CNN
+F 3 "" H 3950 1500 50  0001 C CNN
+	1    3950 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D9
+U 1 1 618BF97F
+P 6350 1200
+F 0 "D9" H 6400 1550 50  0000 L CNN
+F 1 "WS2812B" H 6400 1450 50  0000 L CNN
+F 2 "" H 6400 900 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 6450 825 50  0001 L TNN
+	1    6350 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D10
+U 1 1 618BF985
+P 6950 1200
+F 0 "D10" H 7000 1550 50  0000 L CNN
+F 1 "WS2812B" H 7000 1450 50  0000 L CNN
+F 2 "" H 7000 900 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 7050 825 50  0001 L TNN
+	1    6950 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D11
+U 1 1 618BF98B
+P 7550 1200
+F 0 "D11" H 7600 1550 50  0000 L CNN
+F 1 "WS2812B" H 7600 1450 50  0000 L CNN
+F 2 "" H 7600 900 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 7650 825 50  0001 L TNN
+	1    7550 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D12
+U 1 1 618BF991
+P 8150 1200
+F 0 "D12" H 8200 1550 50  0000 L CNN
+F 1 "WS2812B" H 8200 1450 50  0000 L CNN
+F 2 "" H 8200 900 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 8250 825 50  0001 L TNN
+	1    8150 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0117
+U 1 1 618BF997
+P 8150 1500
+F 0 "#PWR0117" H 8150 1250 50  0001 C CNN
+F 1 "GND" H 8155 1327 50  0000 C CNN
+F 2 "" H 8150 1500 50  0001 C CNN
+F 3 "" H 8150 1500 50  0001 C CNN
+	1    8150 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0118
+U 1 1 618BF99D
+P 7550 1500
+F 0 "#PWR0118" H 7550 1250 50  0001 C CNN
+F 1 "GND" H 7555 1327 50  0000 C CNN
+F 2 "" H 7550 1500 50  0001 C CNN
+F 3 "" H 7550 1500 50  0001 C CNN
+	1    7550 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0119
+U 1 1 618BF9A3
+P 6950 1500
+F 0 "#PWR0119" H 6950 1250 50  0001 C CNN
+F 1 "GND" H 6955 1327 50  0000 C CNN
+F 2 "" H 6950 1500 50  0001 C CNN
+F 3 "" H 6950 1500 50  0001 C CNN
+	1    6950 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0120
+U 1 1 618BF9A9
+P 6350 1500
+F 0 "#PWR0120" H 6350 1250 50  0001 C CNN
+F 1 "GND" H 6355 1327 50  0000 C CNN
+F 2 "" H 6350 1500 50  0001 C CNN
+F 3 "" H 6350 1500 50  0001 C CNN
+	1    6350 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D13
+U 1 1 618C38B0
+P 8750 1200
+F 0 "D13" H 8800 1550 50  0000 L CNN
+F 1 "WS2812B" H 8800 1450 50  0000 L CNN
+F 2 "" H 8800 900 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 8850 825 50  0001 L TNN
+	1    8750 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D14
+U 1 1 618C38B6
+P 9350 1200
+F 0 "D14" H 9400 1550 50  0000 L CNN
+F 1 "WS2812B" H 9400 1450 50  0000 L CNN
+F 2 "" H 9400 900 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 9450 825 50  0001 L TNN
+	1    9350 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D15
+U 1 1 618C38BC
+P 9950 1200
+F 0 "D15" H 10000 1550 50  0000 L CNN
+F 1 "WS2812B" H 10000 1450 50  0000 L CNN
+F 2 "" H 10000 900 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 10050 825 50  0001 L TNN
+	1    9950 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D16
+U 1 1 618C38C2
+P 10550 1200
+F 0 "D16" H 10600 1550 50  0000 L CNN
+F 1 "WS2812B" H 10600 1450 50  0000 L CNN
+F 2 "" H 10600 900 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 10650 825 50  0001 L TNN
+	1    10550 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0121
+U 1 1 618C38C8
+P 10550 1500
+F 0 "#PWR0121" H 10550 1250 50  0001 C CNN
+F 1 "GND" H 10555 1327 50  0000 C CNN
+F 2 "" H 10550 1500 50  0001 C CNN
+F 3 "" H 10550 1500 50  0001 C CNN
+	1    10550 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0122
+U 1 1 618C38CE
+P 9950 1500
+F 0 "#PWR0122" H 9950 1250 50  0001 C CNN
+F 1 "GND" H 9955 1327 50  0000 C CNN
+F 2 "" H 9950 1500 50  0001 C CNN
+F 3 "" H 9950 1500 50  0001 C CNN
+	1    9950 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0123
+U 1 1 618C38D4
+P 9350 1500
+F 0 "#PWR0123" H 9350 1250 50  0001 C CNN
+F 1 "GND" H 9355 1327 50  0000 C CNN
+F 2 "" H 9350 1500 50  0001 C CNN
+F 3 "" H 9350 1500 50  0001 C CNN
+	1    9350 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0124
+U 1 1 618C38DA
+P 8750 1500
+F 0 "#PWR0124" H 8750 1250 50  0001 C CNN
+F 1 "GND" H 8755 1327 50  0000 C CNN
+F 2 "" H 8750 1500 50  0001 C CNN
+F 3 "" H 8750 1500 50  0001 C CNN
+	1    8750 1500
+	1    0    0    -1  
+$EndComp
+NoConn ~ 10850 1200
+NoConn ~ 4000 3100
+$Comp
+L Device:Rotary_Encoder_Switch SW17
+U 1 1 6191DBE5
+P 10000 5050
+F 0 "SW17" H 10000 5417 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 10000 5326 50  0000 C CNN
+F 2 "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm" H 9850 5210 50  0001 C CNN
+F 3 "~" H 10000 5310 50  0001 C CNN
+	1    10000 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0125
+U 1 1 6192074A
+P 9550 5250
+F 0 "#PWR0125" H 9550 5000 50  0001 C CNN
+F 1 "GND" H 9555 5077 50  0000 C CNN
+F 2 "" H 9550 5250 50  0001 C CNN
+F 3 "" H 9550 5250 50  0001 C CNN
+	1    9550 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9550 5250 9550 5050
+Wire Wire Line
+	9700 5050 9550 5050
+Wire Wire Line
+	9700 5150 9500 5150
+Wire Wire Line
+	9500 4950 9700 4950
+Text GLabel 9500 4950 0    50   Input ~ 0
+encoder_a
+Text GLabel 9500 5150 0    50   Input ~ 0
+encoder_b
+Text GLabel 10300 4950 2    50   Input ~ 0
+encoder_sw
+$Comp
+L power:GND #PWR0126
+U 1 1 61926121
+P 10350 5250
+F 0 "#PWR0126" H 10350 5000 50  0001 C CNN
+F 1 "GND" H 10355 5077 50  0000 C CNN
+F 2 "" H 10350 5250 50  0001 C CNN
+F 3 "" H 10350 5250 50  0001 C CNN
+	1    10350 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10350 5250 10350 5150
+Wire Wire Line
+	10350 5150 10300 5150
+Text GLabel 4000 4250 0    50   Input ~ 0
+encoder_a
+Text GLabel 4000 4350 0    50   Input ~ 0
+encoder_b
+Text GLabel 4000 4450 0    50   Input ~ 0
+encoder_sw
+Text GLabel 5200 4600 2    50   Input ~ 0
+i2c_scl
+Text GLabel 5200 4700 2    50   Input ~ 0
+i2c_sda
+Text GLabel 5200 4800 2    50   Input ~ 0
+keypad_int
+$Comp
+L Switch:SW_Push SW2
+U 1 1 6192E909
+P 7050 3250
+F 0 "SW2" H 7050 3535 50  0000 C CNN
+F 1 "SW_Push" H 7050 3444 50  0000 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 7050 3450 50  0001 C CNN
+F 3 "~" H 7050 3450 50  0001 C CNN
+	1    7050 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0127
+U 1 1 61931B4E
+P 7250 3250
+F 0 "#PWR0127" H 7250 3000 50  0001 C CNN
+F 1 "GND" H 7255 3077 50  0000 C CNN
+F 2 "" H 7250 3250 50  0001 C CNN
+F 3 "" H 7250 3250 50  0001 C CNN
+	1    7250 3250
+	1    0    0    -1  
+$EndComp
+Text GLabel 6850 3250 0    50   Input ~ 0
+sw_0
+$Comp
+L Switch:SW_Push SW6
+U 1 1 619340B2
+P 7800 3250
+F 0 "SW6" H 7800 3535 50  0000 C CNN
+F 1 "SW_Push" H 7800 3444 50  0000 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 7800 3450 50  0001 C CNN
+F 3 "~" H 7800 3450 50  0001 C CNN
+	1    7800 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0128
+U 1 1 619340B8
+P 8000 3250
+F 0 "#PWR0128" H 8000 3000 50  0001 C CNN
+F 1 "GND" H 8005 3077 50  0000 C CNN
+F 2 "" H 8000 3250 50  0001 C CNN
+F 3 "" H 8000 3250 50  0001 C CNN
+	1    8000 3250
+	1    0    0    -1  
+$EndComp
+Text GLabel 7600 3250 0    50   Input ~ 0
+sw_1
+$Comp
+L Switch:SW_Push SW10
+U 1 1 61934DB0
+P 8550 3250
+F 0 "SW10" H 8550 3535 50  0000 C CNN
+F 1 "SW_Push" H 8550 3444 50  0000 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 8550 3450 50  0001 C CNN
+F 3 "~" H 8550 3450 50  0001 C CNN
+	1    8550 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0129
+U 1 1 61934DB6
+P 8750 3250
+F 0 "#PWR0129" H 8750 3000 50  0001 C CNN
+F 1 "GND" H 8755 3077 50  0000 C CNN
+F 2 "" H 8750 3250 50  0001 C CNN
+F 3 "" H 8750 3250 50  0001 C CNN
+	1    8750 3250
+	1    0    0    -1  
+$EndComp
+Text GLabel 8350 3250 0    50   Input ~ 0
+sw_2
+$Comp
+L Switch:SW_Push SW14
+U 1 1 61935A1B
+P 9300 3250
+F 0 "SW14" H 9300 3535 50  0000 C CNN
+F 1 "SW_Push" H 9300 3444 50  0000 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 9300 3450 50  0001 C CNN
+F 3 "~" H 9300 3450 50  0001 C CNN
+	1    9300 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0130
+U 1 1 61935A21
+P 9500 3250
+F 0 "#PWR0130" H 9500 3000 50  0001 C CNN
+F 1 "GND" H 9505 3077 50  0000 C CNN
+F 2 "" H 9500 3250 50  0001 C CNN
+F 3 "" H 9500 3250 50  0001 C CNN
+	1    9500 3250
+	1    0    0    -1  
+$EndComp
+Text GLabel 9100 3250 0    50   Input ~ 0
+sw_3
+$Comp
+L Switch:SW_Push SW3
+U 1 1 6193D2E1
+P 7050 3800
+F 0 "SW3" H 7050 4085 50  0000 C CNN
+F 1 "SW_Push" H 7050 3994 50  0000 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 7050 4000 50  0001 C CNN
+F 3 "~" H 7050 4000 50  0001 C CNN
+	1    7050 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0131
+U 1 1 6193D2E7
+P 7250 3800
+F 0 "#PWR0131" H 7250 3550 50  0001 C CNN
+F 1 "GND" H 7255 3627 50  0000 C CNN
+F 2 "" H 7250 3800 50  0001 C CNN
+F 3 "" H 7250 3800 50  0001 C CNN
+	1    7250 3800
+	1    0    0    -1  
+$EndComp
+Text GLabel 6850 3800 0    50   Input ~ 0
+sw_4
+$Comp
+L Switch:SW_Push SW7
+U 1 1 6193D2EE
+P 7800 3800
+F 0 "SW7" H 7800 4085 50  0000 C CNN
+F 1 "SW_Push" H 7800 3994 50  0000 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 7800 4000 50  0001 C CNN
+F 3 "~" H 7800 4000 50  0001 C CNN
+	1    7800 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0132
+U 1 1 6193D2F4
+P 8000 3800
+F 0 "#PWR0132" H 8000 3550 50  0001 C CNN
+F 1 "GND" H 8005 3627 50  0000 C CNN
+F 2 "" H 8000 3800 50  0001 C CNN
+F 3 "" H 8000 3800 50  0001 C CNN
+	1    8000 3800
+	1    0    0    -1  
+$EndComp
+Text GLabel 7600 3800 0    50   Input ~ 0
+sw_5
+$Comp
+L Switch:SW_Push SW11
+U 1 1 6193D2FB
+P 8550 3800
+F 0 "SW11" H 8550 4085 50  0000 C CNN
+F 1 "SW_Push" H 8550 3994 50  0000 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 8550 4000 50  0001 C CNN
+F 3 "~" H 8550 4000 50  0001 C CNN
+	1    8550 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0133
+U 1 1 6193D301
+P 8750 3800
+F 0 "#PWR0133" H 8750 3550 50  0001 C CNN
+F 1 "GND" H 8755 3627 50  0000 C CNN
+F 2 "" H 8750 3800 50  0001 C CNN
+F 3 "" H 8750 3800 50  0001 C CNN
+	1    8750 3800
+	1    0    0    -1  
+$EndComp
+Text GLabel 8350 3800 0    50   Input ~ 0
+sw_6
+$Comp
+L Switch:SW_Push SW15
+U 1 1 6193D308
+P 9300 3800
+F 0 "SW15" H 9300 4085 50  0000 C CNN
+F 1 "SW_Push" H 9300 3994 50  0000 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 9300 4000 50  0001 C CNN
+F 3 "~" H 9300 4000 50  0001 C CNN
+	1    9300 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0134
+U 1 1 6193D30E
+P 9500 3800
+F 0 "#PWR0134" H 9500 3550 50  0001 C CNN
+F 1 "GND" H 9505 3627 50  0000 C CNN
+F 2 "" H 9500 3800 50  0001 C CNN
+F 3 "" H 9500 3800 50  0001 C CNN
+	1    9500 3800
+	1    0    0    -1  
+$EndComp
+Text GLabel 9100 3800 0    50   Input ~ 0
+sw_7
+$Comp
+L Switch:SW_Push SW4
+U 1 1 6193FC99
+P 7050 4350
+F 0 "SW4" H 7050 4635 50  0000 C CNN
+F 1 "SW_Push" H 7050 4544 50  0000 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 7050 4550 50  0001 C CNN
+F 3 "~" H 7050 4550 50  0001 C CNN
+	1    7050 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0135
+U 1 1 6193FC9F
+P 7250 4350
+F 0 "#PWR0135" H 7250 4100 50  0001 C CNN
+F 1 "GND" H 7255 4177 50  0000 C CNN
+F 2 "" H 7250 4350 50  0001 C CNN
+F 3 "" H 7250 4350 50  0001 C CNN
+	1    7250 4350
+	1    0    0    -1  
+$EndComp
+Text GLabel 6850 4350 0    50   Input ~ 0
+sw_8
+$Comp
+L Switch:SW_Push SW8
+U 1 1 6193FCA6
+P 7800 4350
+F 0 "SW8" H 7800 4635 50  0000 C CNN
+F 1 "SW_Push" H 7800 4544 50  0000 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 7800 4550 50  0001 C CNN
+F 3 "~" H 7800 4550 50  0001 C CNN
+	1    7800 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0136
+U 1 1 6193FCAC
+P 8000 4350
+F 0 "#PWR0136" H 8000 4100 50  0001 C CNN
+F 1 "GND" H 8005 4177 50  0000 C CNN
+F 2 "" H 8000 4350 50  0001 C CNN
+F 3 "" H 8000 4350 50  0001 C CNN
+	1    8000 4350
+	1    0    0    -1  
+$EndComp
+Text GLabel 7600 4350 0    50   Input ~ 0
+sw_9
+$Comp
+L Switch:SW_Push SW12
+U 1 1 6193FCB3
+P 8550 4350
+F 0 "SW12" H 8550 4635 50  0000 C CNN
+F 1 "SW_Push" H 8550 4544 50  0000 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 8550 4550 50  0001 C CNN
+F 3 "~" H 8550 4550 50  0001 C CNN
+	1    8550 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0137
+U 1 1 6193FCB9
+P 8750 4350
+F 0 "#PWR0137" H 8750 4100 50  0001 C CNN
+F 1 "GND" H 8755 4177 50  0000 C CNN
+F 2 "" H 8750 4350 50  0001 C CNN
+F 3 "" H 8750 4350 50  0001 C CNN
+	1    8750 4350
+	1    0    0    -1  
+$EndComp
+Text GLabel 8350 4350 0    50   Input ~ 0
+sw_10
+$Comp
+L Switch:SW_Push SW16
+U 1 1 6193FCC0
+P 9300 4350
+F 0 "SW16" H 9300 4635 50  0000 C CNN
+F 1 "SW_Push" H 9300 4544 50  0000 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 9300 4550 50  0001 C CNN
+F 3 "~" H 9300 4550 50  0001 C CNN
+	1    9300 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0138
+U 1 1 6193FCC6
+P 9500 4350
+F 0 "#PWR0138" H 9500 4100 50  0001 C CNN
+F 1 "GND" H 9505 4177 50  0000 C CNN
+F 2 "" H 9500 4350 50  0001 C CNN
+F 3 "" H 9500 4350 50  0001 C CNN
+	1    9500 4350
+	1    0    0    -1  
+$EndComp
+Text GLabel 9100 4350 0    50   Input ~ 0
+sw_11
+$Comp
+L Switch:SW_Push SW5
+U 1 1 61943A4F
+P 7050 4950
+F 0 "SW5" H 7050 5235 50  0000 C CNN
+F 1 "SW_Push" H 7050 5144 50  0000 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 7050 5150 50  0001 C CNN
+F 3 "~" H 7050 5150 50  0001 C CNN
+	1    7050 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0139
+U 1 1 61943A55
+P 7250 4950
+F 0 "#PWR0139" H 7250 4700 50  0001 C CNN
+F 1 "GND" H 7255 4777 50  0000 C CNN
+F 2 "" H 7250 4950 50  0001 C CNN
+F 3 "" H 7250 4950 50  0001 C CNN
+	1    7250 4950
+	1    0    0    -1  
+$EndComp
+Text GLabel 6850 4950 0    50   Input ~ 0
+sw_12
+$Comp
+L Switch:SW_Push SW9
+U 1 1 61943A5C
+P 7800 4950
+F 0 "SW9" H 7800 5235 50  0000 C CNN
+F 1 "SW_Push" H 7800 5144 50  0000 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 7800 5150 50  0001 C CNN
+F 3 "~" H 7800 5150 50  0001 C CNN
+	1    7800 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0140
+U 1 1 61943A62
+P 8000 4950
+F 0 "#PWR0140" H 8000 4700 50  0001 C CNN
+F 1 "GND" H 8005 4777 50  0000 C CNN
+F 2 "" H 8000 4950 50  0001 C CNN
+F 3 "" H 8000 4950 50  0001 C CNN
+	1    8000 4950
+	1    0    0    -1  
+$EndComp
+Text GLabel 7600 4950 0    50   Input ~ 0
+sw_13
+$Comp
+L Switch:SW_Push SW13
+U 1 1 61943A69
+P 8550 4950
+F 0 "SW13" H 8550 5235 50  0000 C CNN
+F 1 "SW_Push" H 8550 5144 50  0000 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 8550 5150 50  0001 C CNN
+F 3 "~" H 8550 5150 50  0001 C CNN
+	1    8550 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0141
+U 1 1 61943A6F
+P 8750 4950
+F 0 "#PWR0141" H 8750 4700 50  0001 C CNN
+F 1 "GND" H 8755 4777 50  0000 C CNN
+F 2 "" H 8750 4950 50  0001 C CNN
+F 3 "" H 8750 4950 50  0001 C CNN
+	1    8750 4950
+	1    0    0    -1  
+$EndComp
+Text GLabel 8350 4950 0    50   Input ~ 0
+sw_14
+$Comp
+L Connector_Generic:Conn_01x03 J2
+U 1 1 61947E3B
+P 6050 3350
+F 0 "J2" H 6130 3392 50  0000 L CNN
+F 1 "swd" H 6130 3301 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6050 3350 50  0001 C CNN
+F 3 "~" H 6050 3350 50  0001 C CNN
+	1    6050 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0142
+U 1 1 61948552
+P 5850 3450
+F 0 "#PWR0142" H 5850 3200 50  0001 C CNN
+F 1 "GND" H 5855 3277 50  0000 C CNN
+F 2 "" H 5850 3450 50  0001 C CNN
+F 3 "" H 5850 3450 50  0001 C CNN
+	1    5850 3450
+	1    0    0    -1  
+$EndComp
+Text Label 5300 3350 0    50   ~ 0
+swd_io
+Text Label 5300 3250 0    50   ~ 0
+swd_clk
+Wire Wire Line
+	5200 3250 5850 3250
+Wire Wire Line
+	5200 3350 5850 3350
+Text GLabel 4000 3200 0    50   Input ~ 0
+sw_0
+Text GLabel 4000 3300 0    50   Input ~ 0
+sw_1
+Text GLabel 4000 3400 0    50   Input ~ 0
+sw_2
+Text GLabel 4000 3500 0    50   Input ~ 0
+sw_3
+Text GLabel 4000 3600 0    50   Input ~ 0
+sw_4
+Text GLabel 4000 3700 0    50   Input ~ 0
+sw_5
+Text GLabel 4000 3800 0    50   Input ~ 0
+sw_6
+Text GLabel 5200 3150 2    50   Input ~ 0
+sw_7
+Text GLabel 5200 3450 2    50   Input ~ 0
+sw_8
+Text GLabel 5200 3550 2    50   Input ~ 0
+sw_9
+Text GLabel 5200 4100 2    50   Input ~ 0
+sw_10
+Text GLabel 5200 4200 2    50   Input ~ 0
+sw_11
+Text GLabel 5200 4300 2    50   Input ~ 0
+sw_12
+Text GLabel 5200 4400 2    50   Input ~ 0
+sw_13
+Text GLabel 5200 4500 2    50   Input ~ 0
+sw_14
+$Comp
+L good_things:74AXP1T45GWH U1
+U 1 1 61967037
+P 2800 2800
+F 0 "U1" H 2800 3225 50  0000 C CNN
+F 1 "74AXP1T45GWH" H 2800 3134 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" H 2750 2600 50  0001 C CNN
+F 3 "" H 2750 2600 50  0001 C CNN
+	1    2800 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C5
+U 1 1 61971832
+P 3400 3200
+F 0 "C5" H 3492 3246 50  0000 L CNN
+F 1 "100n" H 3492 3155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3400 3200 50  0001 C CNN
+F 3 "~" H 3400 3200 50  0001 C CNN
+	1    3400 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 61970409
+P 2200 3200
+F 0 "C2" H 2292 3246 50  0000 L CNN
+F 1 "100n" H 2292 3155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2200 3200 50  0001 C CNN
+F 3 "~" H 2200 3200 50  0001 C CNN
+	1    2200 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0143
+U 1 1 6197E4E0
+P 3400 3300
+F 0 "#PWR0143" H 3400 3050 50  0001 C CNN
+F 1 "GND" H 3405 3127 50  0000 C CNN
+F 2 "" H 3400 3300 50  0001 C CNN
+F 3 "" H 3400 3300 50  0001 C CNN
+	1    3400 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0144
+U 1 1 6197ECBA
+P 2200 3300
+F 0 "#PWR0144" H 2200 3050 50  0001 C CNN
+F 1 "GND" H 2205 3127 50  0000 C CNN
+F 2 "" H 2200 3300 50  0001 C CNN
+F 3 "" H 2200 3300 50  0001 C CNN
+	1    2200 3300
+	1    0    0    -1  
+$EndComp
+Text Label 3450 3000 0    50   ~ 0
+led_data_mcu
+$Comp
+L power:+5V #PWR0145
+U 1 1 61984A14
+P 2200 2600
+F 0 "#PWR0145" H 2200 2450 50  0001 C CNN
+F 1 "+5V" H 2215 2773 50  0000 C CNN
+F 2 "" H 2200 2600 50  0001 C CNN
+F 3 "" H 2200 2600 50  0001 C CNN
+	1    2200 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0146
+U 1 1 619854C9
+P 3400 2600
+F 0 "#PWR0146" H 3400 2450 50  0001 C CNN
+F 1 "+3V3" H 3415 2773 50  0000 C CNN
+F 2 "" H 3400 2600 50  0001 C CNN
+F 3 "" H 3400 2600 50  0001 C CNN
+	1    3400 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0147
+U 1 1 61986768
+P 3250 3300
+F 0 "#PWR0147" H 3250 3050 50  0001 C CNN
+F 1 "GND" H 3255 3127 50  0000 C CNN
+F 2 "" H 3250 3300 50  0001 C CNN
+F 3 "" H 3250 3300 50  0001 C CNN
+	1    3250 3300
+	1    0    0    -1  
+$EndComp
+Connection ~ 2200 2600
+Wire Wire Line
+	2200 3100 2200 2600
+$Comp
+L power:GND #PWR0148
+U 1 1 6198A488
+P 2350 3300
+F 0 "#PWR0148" H 2350 3050 50  0001 C CNN
+F 1 "GND" H 2355 3127 50  0000 C CNN
+F 2 "" H 2350 3300 50  0001 C CNN
+F 3 "" H 2350 3300 50  0001 C CNN
+	1    2350 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 2800 2450 2800
+Wire Wire Line
+	2200 2600 2450 2600
+Wire Wire Line
+	2350 2800 2350 3300
+Wire Wire Line
+	3150 3000 4000 3000
+Wire Wire Line
+	3400 3100 3400 2600
+Connection ~ 3400 2600
+Wire Wire Line
+	3150 2800 3250 2800
+Wire Wire Line
+	3250 2800 3250 3300
+Wire Wire Line
+	3150 2600 3400 2600
+Wire Wire Line
+	1250 1200 950  1200
+Wire Wire Line
+	950  1200 950  3000
+Wire Wire Line
+	950  3000 2450 3000
+Text Label 1400 3000 0    50   ~ 0
+led_data
+Wire Wire Line
+	4850 6700 5650 6700
+Wire Wire Line
+	5650 6600 4850 6600
+Wire Wire Line
+	4850 6500 5650 6500
+Text GLabel 4850 6500 0    50   Input ~ 0
+i2c_scl
+Text GLabel 4850 6600 0    50   Input ~ 0
+i2c_sda
+Text GLabel 4850 6700 0    50   Input ~ 0
+keypad_int
+Wire Wire Line
+	5050 6900 5050 7000
+Connection ~ 5050 6900
+Wire Wire Line
+	5050 6900 5650 6900
+Wire Wire Line
+	5050 6300 5050 6900
+$Comp
+L power:GND #PWR0149
+U 1 1 61883200
+P 5350 7200
+F 0 "#PWR0149" H 5350 6950 50  0001 C CNN
+F 1 "GND" H 5355 7027 50  0000 C CNN
+F 2 "" H 5350 7200 50  0001 C CNN
+F 3 "" H 5350 7200 50  0001 C CNN
+	1    5350 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0150
+U 1 1 61882831
+P 5050 7200
+F 0 "#PWR0150" H 5050 6950 50  0001 C CNN
+F 1 "GND" H 5055 7027 50  0000 C CNN
+F 2 "" H 5050 7200 50  0001 C CNN
+F 3 "" H 5050 7200 50  0001 C CNN
+	1    5050 7200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 6400 5650 6400
+Connection ~ 5350 6400
+Wire Wire Line
+	5350 6400 5350 7000
+Wire Wire Line
+	5350 6300 5350 6400
+$Comp
+L Device:C_Small C7
+U 1 1 61880375
+P 5050 7100
+F 0 "C7" H 5142 7146 50  0000 L CNN
+F 1 "22u" H 5142 7055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5050 7100 50  0001 C CNN
+F 3 "~" H 5050 7100 50  0001 C CNN
+	1    5050 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C8
+U 1 1 6187F0D1
+P 5350 7100
+F 0 "C8" H 5442 7146 50  0000 L CNN
+F 1 "22u" H 5442 7055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5350 7100 50  0001 C CNN
+F 3 "~" H 5350 7100 50  0001 C CNN
+	1    5350 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0151
+U 1 1 61873017
+P 5050 6300
+F 0 "#PWR0151" H 5050 6150 50  0001 C CNN
+F 1 "+5V" H 5065 6473 50  0000 C CNN
+F 2 "" H 5050 6300 50  0001 C CNN
+F 3 "" H 5050 6300 50  0001 C CNN
+	1    5050 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0152
+U 1 1 61872534
+P 5350 6300
+F 0 "#PWR0152" H 5350 6150 50  0001 C CNN
+F 1 "+3V3" H 5365 6473 50  0000 C CNN
+F 2 "" H 5350 6300 50  0001 C CNN
+F 3 "" H 5350 6300 50  0001 C CNN
+	1    5350 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Ferrite_Bead_Small FB1
+U 1 1 6199FBC1
+P 1200 800
+F 0 "FB1" V 963 800 50  0000 C CNN
+F 1 "1k@100 0.5A" V 1054 800 50  0000 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric" V 1130 800 50  0001 C CNN
+F 3 "~" H 1200 800 50  0001 C CNN
+	1    1200 800 
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0153
+U 1 1 619A0D5E
+P 800 700
+F 0 "#PWR0153" H 800 550 50  0001 C CNN
+F 1 "+5V" H 815 873 50  0000 C CNN
+F 2 "" H 800 700 50  0001 C CNN
+F 3 "" H 800 700 50  0001 C CNN
+	1    800  700 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  700  800  800 
+Wire Wire Line
+	800  800  1100 800 
+Wire Wire Line
+	1300 800  1550 800 
+Wire Wire Line
+	1550 800  1550 900 
+Wire Wire Line
+	1550 800  2150 800 
+Wire Wire Line
+	2150 800  2150 900 
+Connection ~ 1550 800 
+Wire Wire Line
+	2150 800  2750 800 
+Wire Wire Line
+	2750 800  2750 900 
+Connection ~ 2150 800 
+Wire Wire Line
+	2750 800  3350 800 
+Wire Wire Line
+	3350 800  3350 900 
+Connection ~ 2750 800 
+Wire Wire Line
+	3350 800  3950 800 
+Wire Wire Line
+	3950 800  3950 900 
+Connection ~ 3350 800 
+Wire Wire Line
+	3950 800  4550 800 
+Wire Wire Line
+	4550 800  4550 900 
+Connection ~ 3950 800 
+Wire Wire Line
+	4550 800  5150 800 
+Wire Wire Line
+	5150 800  5150 900 
+Connection ~ 4550 800 
+Wire Wire Line
+	5150 800  5750 800 
+Wire Wire Line
+	5750 800  5750 900 
+Connection ~ 5150 800 
+Wire Wire Line
+	5750 800  6350 800 
+Wire Wire Line
+	6350 800  6350 900 
+Connection ~ 5750 800 
+Wire Wire Line
+	6350 800  6950 800 
+Wire Wire Line
+	6950 800  6950 900 
+Connection ~ 6350 800 
+Wire Wire Line
+	6950 800  7550 800 
+Wire Wire Line
+	7550 800  7550 900 
+Connection ~ 6950 800 
+Wire Wire Line
+	7550 800  8150 800 
+Wire Wire Line
+	8150 800  8150 900 
+Connection ~ 7550 800 
+Connection ~ 8150 800 
+Wire Wire Line
+	8750 800  8750 900 
+Wire Wire Line
+	9350 800  9350 900 
+Wire Wire Line
+	8150 800  8750 800 
+Connection ~ 8750 800 
+Wire Wire Line
+	8750 800  9350 800 
+Wire Wire Line
+	9350 800  9950 800 
+Wire Wire Line
+	9950 800  9950 900 
+Connection ~ 9350 800 
+Wire Wire Line
+	9950 800  10550 800 
+Wire Wire Line
+	10550 800  10550 900 
+Connection ~ 9950 800 
+Text Label 1550 800  0    50   ~ 0
+5v_neopixel
+$EndSCHEMATC
