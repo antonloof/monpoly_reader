@@ -560,92 +560,7 @@ F 3 "" H 4200 1550 50  0001 C CNN
 	1    4200 1550
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:R_Small R5
-U 1 1 61463BAF
-P 8000 4250
-F 0 "R5" H 8059 4296 50  0000 L CNN
-F 1 "0" H 8059 4205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8000 4250 50  0001 C CNN
-F 3 "~" H 8000 4250 50  0001 C CNN
-	1    8000 4250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R7
-U 1 1 614642A8
-P 8200 4250
-F 0 "R7" H 8259 4296 50  0000 L CNN
-F 1 "0" H 8259 4205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8200 4250 50  0001 C CNN
-F 3 "~" H 8200 4250 50  0001 C CNN
-	1    8200 4250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R6
-U 1 1 61464A89
-P 8000 4650
-F 0 "R6" H 8059 4696 50  0000 L CNN
-F 1 "0" H 8059 4605 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8000 4650 50  0001 C CNN
-F 3 "~" H 8000 4650 50  0001 C CNN
-	1    8000 4650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R8
-U 1 1 61464A8F
-P 8200 4650
-F 0 "R8" H 8259 4696 50  0000 L CNN
-F 1 "0" H 8259 4605 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8200 4650 50  0001 C CNN
-F 3 "~" H 8200 4650 50  0001 C CNN
-	1    8200 4650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR023
-U 1 1 6146EAF9
-P 8450 4250
-F 0 "#PWR023" H 8450 4100 50  0001 C CNN
-F 1 "+3V3" H 8465 4423 50  0000 C CNN
-F 2 "" H 8450 4250 50  0001 C CNN
-F 3 "" H 8450 4250 50  0001 C CNN
-	1    8450 4250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8450 4250 8400 4250
-Wire Wire Line
-	8400 4250 8400 4150
-Wire Wire Line
-	8200 4150 8000 4150
-Wire Wire Line
-	8000 4350 8000 4400
-Wire Wire Line
-	8200 4550 8200 4500
-Wire Wire Line
-	8000 4550 8000 4400
-Connection ~ 8000 4400
-Wire Wire Line
-	8200 4350 8200 4500
-Connection ~ 8200 4500
-Wire Wire Line
-	8000 4750 8200 4750
-$Comp
-L power:GND #PWR021
-U 1 1 614A185E
-P 8200 4750
-F 0 "#PWR021" H 8200 4500 50  0001 C CNN
-F 1 "GND" H 8205 4577 50  0000 C CNN
-F 2 "" H 8200 4750 50  0001 C CNN
-F 3 "" H 8200 4750 50  0001 C CNN
-	1    8200 4750
-	1    0    0    -1  
-$EndComp
-Connection ~ 8200 4750
-Text Notes 8350 4500 0    50   ~ 0
+Text Notes 7600 5100 0    50   ~ 0
 ssi_0 = 1, ssi_1 = 0\ni think, but lets be sure
 $Comp
 L Device:R_Small R4
@@ -1109,14 +1024,6 @@ Text Label 7900 3900 0    50   ~ 0
 spi_miso_rfid
 Text Label 7900 4000 0    50   ~ 0
 spi_ss_rfid
-Wire Wire Line
-	7600 4400 8000 4400
-Wire Wire Line
-	7600 4500 8200 4500
-Text Label 7650 4400 0    50   ~ 0
-rfid_ss1
-Text Label 7650 4500 0    50   ~ 0
-rfid_ss0
 Text Label 5700 3900 0    50   ~ 0
 rfid_xin
 Text Label 5700 4000 0    50   ~ 0
@@ -1522,9 +1429,6 @@ Wire Wire Line
 Wire Wire Line
 	5250 4400 5250 4750
 Connection ~ 5250 4400
-Connection ~ 8200 4150
-Wire Wire Line
-	8400 4150 8200 4150
 $Comp
 L power:+5V #PWR0106
 U 1 1 6167EF3E
@@ -1632,4 +1536,86 @@ Text GLabel 10650 7550 0    50   Input ~ 0
 lcd_d6
 Text GLabel 10650 7650 0    50   Input ~ 0
 lcd_d7
+$Comp
+L Jumper:SolderJumper_3_Open JP1
+U 1 1 6168BA39
+P 8500 4500
+F 0 "JP1" V 8454 4568 50  0000 L CNN
+F 1 "xx" V 8545 4568 50  0000 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" H 8500 4500 50  0001 C CNN
+F 3 "~" H 8500 4500 50  0001 C CNN
+	1    8500 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper:SolderJumper_3_Open JP2
+U 1 1 6168C258
+P 9300 4500
+F 0 "JP2" V 9254 4568 50  0000 L CNN
+F 1 "xx" V 9345 4568 50  0000 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" H 9300 4500 50  0001 C CNN
+F 3 "~" H 9300 4500 50  0001 C CNN
+	1    9300 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3V3 #PWR0103
+U 1 1 6168D035
+P 8500 4300
+F 0 "#PWR0103" H 8500 4150 50  0001 C CNN
+F 1 "+3V3" H 8515 4473 50  0000 C CNN
+F 2 "" H 8500 4300 50  0001 C CNN
+F 3 "" H 8500 4300 50  0001 C CNN
+	1    8500 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0107
+U 1 1 6168D33A
+P 9300 4300
+F 0 "#PWR0107" H 9300 4150 50  0001 C CNN
+F 1 "+3V3" H 9315 4473 50  0000 C CNN
+F 2 "" H 9300 4300 50  0001 C CNN
+F 3 "" H 9300 4300 50  0001 C CNN
+	1    9300 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 6168D602
+P 8500 4700
+F 0 "#PWR0108" H 8500 4450 50  0001 C CNN
+F 1 "GND" H 8505 4527 50  0000 C CNN
+F 2 "" H 8500 4700 50  0001 C CNN
+F 3 "" H 8500 4700 50  0001 C CNN
+	1    8500 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 6168D868
+P 9300 4700
+F 0 "#PWR0109" H 9300 4450 50  0001 C CNN
+F 1 "GND" H 9305 4527 50  0000 C CNN
+F 2 "" H 9300 4700 50  0001 C CNN
+F 3 "" H 9300 4700 50  0001 C CNN
+	1    9300 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 4500 7600 4500
+Wire Wire Line
+	9150 4500 9100 4500
+Wire Wire Line
+	9100 4500 9100 4050
+Wire Wire Line
+	9100 4050 8200 4050
+Wire Wire Line
+	8200 4050 8200 4400
+Wire Wire Line
+	8200 4400 7600 4400
+Text Label 7650 4400 0    50   ~ 0
+rfid_ss1
+Text Label 7650 4500 0    50   ~ 0
+rfid_ss0
 $EndSCHEMATC
